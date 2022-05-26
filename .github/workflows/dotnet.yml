@@ -1,0 +1,19 @@
+name: Project2
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'project2/**'
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3    
+    - name: Project2 trigger
+      run: echo Project2
+    - name: directory
+      run: ls
