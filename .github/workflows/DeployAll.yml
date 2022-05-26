@@ -1,0 +1,21 @@
+name: AllProject
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'project1/**'
+      - 'Project2/**'
+      - 'Project3/**'
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3    
+    - name: Project1 trigger
+      run: echo Project1
+    - name: directory
+      run: ls
