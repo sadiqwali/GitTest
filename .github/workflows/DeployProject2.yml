@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'project2/**'
+      - 'Project2/**'
 jobs:
   build:
 
