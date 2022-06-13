@@ -19,6 +19,5 @@ jobs:
       run: echo Project1
     - name: directory
       run: ls
-    -name: Extract branch name
-      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-      id: extract_branch
+    -name: branch name
+      run: echo running on branch ${GITHUB_REF##*/}
