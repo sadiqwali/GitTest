@@ -20,5 +20,6 @@ jobs:
       run: echo Project1
     - name: directory
       run: ls
-    -name: branchname
-      run: echo dfsd
+    - name: branchname
+      run: echo ${GITHUB_REF##*/}
+      
