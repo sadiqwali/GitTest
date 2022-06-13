@@ -19,5 +19,5 @@ jobs:
       run: echo Project1
     - name: directory
       run: ls
-    -name: branch name
-      run: echo running on branch ${GITHUB_REF##*/}
+    -name: branchname
+      run: echo ${GITHUB_REF##*/}
