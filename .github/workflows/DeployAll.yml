@@ -21,4 +21,4 @@ jobs:
     - name: directory
       run: ls
     -name: branchname
-      run: echo hello
+      run: echo ${GITHUB_REF##*/}
