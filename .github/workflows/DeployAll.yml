@@ -16,11 +16,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3    
-    - name: Project1 trigger
-      run: echo Project1
-    - name: directory
-      run: ls
+#     - uses: actions/checkout@v3    
+#     - name: Project1 trigger
+#       run: echo Project1
+#     - name: directory
+#       run: ls
     - name: branchname
       run: echo ${GITHUB_REF##*/}
     - name: Set env BRANCH
@@ -28,8 +28,8 @@ jobs:
     - name: Set env NEED
       run: |
         if [[ $BRANCH == 'main'  then
-            echo "TagName='prod'" >> "$GITHUB_ENV"
+            echo "TagName=prod" >> "$GITHUB_ENV"
         else
-            echo "TagName='Dev'" >> "$GITHUB_ENV"
+            echo "TagName=Dev" >> "$GITHUB_ENV"
         fi
       
