@@ -27,7 +27,7 @@ jobs:
       run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
     - name: Set env NEED
       run: |
-        if [[ $BRANCH == 'main'  then
+        if [[ $BRANCH == 'main' ]];  then
             echo "NEED=true" >> "$GITHUB_ENV"
         else
             echo "NEED=false" >> "$GITHUB_ENV"
