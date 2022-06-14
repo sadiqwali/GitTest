@@ -31,5 +31,6 @@ jobs:
             echo "TagName=prod" >> "$GITHUB_ENV"
         else
             echo "TagName=dev" >> "$GITHUB_ENV"
-        fi
-      
+        fi      
+    - name: Print
+      run:  echo ${env.TagName}
