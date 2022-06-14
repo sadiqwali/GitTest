@@ -25,7 +25,7 @@ jobs:
       run: echo ${GITHUB_REF##*/}
     - name: Set env NEED
       run: |
-        run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+        echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
         if [[ $BRANCH == 'main' ]];  then
             echo "TagName=prod" >> "$GITHUB_ENV"
         else
