@@ -33,4 +33,4 @@ jobs:
             echo "TagName=dev" >> "$GITHUB_ENV"
         fi      
     - name: Print
-      run:  echo ${env.TagName}
+      run:  echo ${TagName}
