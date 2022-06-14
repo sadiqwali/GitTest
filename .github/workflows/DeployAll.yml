@@ -28,8 +28,8 @@ jobs:
     - name: Set env NEED
       run: |
         if [[ $BRANCH == 'main' ]];  then
-            echo "NEED=true" >> "$GITHUB_ENV"
+            echo "TagName=prod" >> "$GITHUB_ENV"
         else
-            echo "NEED=false" >> "$GITHUB_ENV"
+            echo "TagName=dev" >> "$GITHUB_ENV"
         fi
       
